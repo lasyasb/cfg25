@@ -1,0 +1,408 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Visions Global Empowerment India</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #00375e;
+      color: white;
+      padding: 10px 30px;
+    }
+    body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=1600&q=80');
+            /* Soothing, blended background */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            /* Adjust for transparency */
+            z-index: -1;
+        }
+
+    header nav {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: underline;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    .language-selector {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-left: 20px;
+    }
+
+    .language-btn {
+      background-color: transparent;
+      color: white;
+      border: 1px solid white;
+      padding: 6px 12px;
+      cursor: pointer;
+      border-radius: 15px;
+      font-size: 12px;
+      transition: all 0.3s ease;
+      margin: 0 2px;
+    }
+
+    .language-btn.active {
+      background-color: white;
+      color: #00375e;
+      font-weight: bold;
+    }
+
+    .login-btn {
+      background-color: white;
+      color: #0065c3;
+      border: none;
+      padding: 8px 16px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-left: 20px;
+    }
+
+    .section {
+      text-align: center;
+      padding: 50px 100px;
+    }
+
+    .section img {
+      width: 250px;
+      height: auto;
+      margin: 20px 0;
+      border-radius: 8px;
+    }
+
+    .section button {
+      background-color: #0065c3;
+      color: white;
+      border: none;
+      padding: 16px 32px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-top: 15px;
+    }
+
+    .section button:hover {
+      background-color: #045c29;
+    }
+
+    .achievement-gallery {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .achievement-item {
+      width: 300px;
+    }
+
+    .achievement-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .section.raise-problem {
+      background-image: url('https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      position: relative;
+      color: white;
+    }
+
+    .section.raise-problem::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    .section.raise-problem * {
+      position: relative;
+      z-index: 1;
+    }
+     h1 {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+        .chart-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.chart-container {
+  width: 400px;
+  max-width: 90%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container.single {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+}
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="language-selector">
+        <span id="language-label">Language:</span>
+        <button class="language-btn active" onclick="switchLanguage('en')">English</button>
+        <button class="language-btn" onclick="switchLanguage('ta')">தமிழ்</button>
+        <button class="language-btn" onclick="switchLanguage('hi')">हिंदी</button>
+      </div>
+      <a href="{% url 'login_page' %}" class="login-btn" id="nav-login">Login</a>
+    </nav>
+  </header>
+
+  <div class="section">
+    <h1 id="main-title">Visions Global Empowerment India ("Visions India")</h1>
+    <i id="quote1">"Education is the most powerful weapon which you can use to change the world." – Nelson Mandela</i>
+    <p id="hero-text">We empower underserved communities by expanding access to quality education, cultivating leadership, promoting digital inclusion and health.</p>
+    <i id="quote2">"The future belongs to those who believe in the beauty of their dreams." – Eleanor Roosevelt</i>
+    <p id="hero-text2">Join us in turning vision into voice, learning into leadership, and communities into catalysts of change.</p>
+    <h2 id="values">LEARNING * LEADERSHIP * INNOVATION * WELL-BEING</h2>
+  </div>
+
+   <div class="section" id="about"
+        style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 40px;">
+        <img src="https://th.bing.com/th/id/OIP.iHxwKObzwzt8NHIp-SMaLwHaEK?w=270&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="About Image"
+            style="width: 350px; height: auto; border-radius: 8px;">
+
+        <div style="max-width: 600px; text-align: left;">
+            <h1>About</h1>
+            <p>
+                Visions India is dedicated to creating lasting impact by providing meaningful education and cultivating
+                strong leadership among underserved communities across India. Through innovative learning programs,
+                youth empowerment initiatives, and community-based development efforts, we aim to bridge opportunity
+                gaps and foster a generation of informed, confident, and socially responsible changemakers.
+            </p>
+        </div>
+    </div>
+
+  <div class="section" id="education">
+    <h1>Education Programs</h1>
+    <div style="position: relative; max-width: 400px; margin: auto;">
+      <div class="slide" style="display: block;">
+        <h3>Leading from Within</h3>
+        <img src="https://www.inspireone.in/wp-content/uploads/2023/11/Women-in-Leadership.png">
+        <p><i>"True leaders don't create followers; they create more leaders." – Tom Peters</i></p>
+      </div>
+      <div class="slide" style="display: none;">
+        <h3>Voices Unveiled</h3>
+        <img src="https://th.bing.com/th/id/OIP.0ATin7MVDzhFLPlY8u-EXAHaE8?w=258&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+        <p><i>"There is no force more powerful than a woman determined to rise."</i></p>
+      </div>
+      <div class="slide" style="display: none;">
+        <h3>Dream Builders</h3>
+        <img src="https://th.bing.com/th/id/OIP.63BUX6OJS31Hns__8Ghl0AHaHa?w=200&h=200&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+        <p><i>"Don't wait for opportunity. Create it."</i></p>
+      </div>
+        <div class="slide" style="display: none;">
+                <h3>Red Is Not a Taboo</h3>
+                <img src="https://forherwithher.in/wp-content/uploads/2023/03/mh-1024x982.png"
+                    style="width: 90%; border-radius: 8px;">
+                <p><i>"Menstruation is not a problem, poor menstrual hygiene is."</i></p>
+            </div>
+               <div class="slide" style="display: none;">
+                <h3>Clean Starts Within</h3>
+                <img src="https://th.bing.com/th/id/OIP.G32eSn4ntFvWsvvd7XrkhwHaH5?w=173&h=184&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+                    style="width: 90%; border-radius: 8px;">
+                <p><i>"Clean hands save lives."</i></p>
+            </div>
+             <div class="slide" style="display: none;">
+                <h3>Childhood, Not Chains</h3>
+                <img src="https://th.bing.com/th/id/OIP.vLzIhmMIXyy4klZGYz3cZgHaKe?w=124&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+                    style="width: 90%; border-radius: 8px;">
+                <p><i>"A girl should be in school, not a wedding dress."</i></p>
+            </div>
+
+
+      <a onclick="changeSlide(-1)" style="cursor: pointer; position: absolute; top: 45%; left: 0; font-size: 30px; color: #0065c3;">&#10094;</a>
+      <a onclick="changeSlide(1)" style="cursor: pointer; position: absolute; top: 45%; right: 0; font-size: 30px; color: #0065c3;">&#10095;</a>
+    </div>
+  </div>
+  <div class="section" id="about"
+        style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 40px;">
+        <img src="https://th.bing.com/th/id/OIP.EcdzhV2VIXs_2gF4J9XwxgAAAA?w=200&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+            style="width: 350px; height: auto; border-radius: 8px;">
+
+        <div style="max-width: 600px; text-align: left;">
+            <h1>Green Initiative</h1>
+            <p>
+                We are deeply committed to sustainability and believe in the power of youth as catalysts for
+                environmental
+                change. Through hands-on initiatives, education, and community engagement, we empower young leaders to
+                take
+                ownership of climate action, promote eco-conscious practices, and drive innovative solutions that
+                protect
+                and preserve our planet for future generations.
+            </p>
+        </div>
+    </div>
+    
+    
+
+  <!-- Achievements Section -->
+<div class="section" id="achievements">
+  <h1>Achievements</h1>
+  <div class="chart-wrapper">
+    <div class="chart-container">
+      <canvas id="chart1"></canvas>
+    </div>
+    <div class="chart-container">
+      <canvas id="chart2"></canvas>
+    </div>
+    <div class="chart-container single">
+      <canvas id="chart3"></canvas>
+    </div>
+  </div>
+</div>
+
+  <div class="section raise-problem" id="raise-problem">
+    <h1>Raise a Problem</h1>
+    <p>If you or your community are facing an issue, let us know. Together, we can find a solution.</p>
+    <form style="max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px;">
+      <input type="text" placeholder="Your Name" required style="padding: 10px; border-radius: 6px;">
+      <input type="email" placeholder="Your Email" required style="padding: 10px; border-radius: 6px;">
+      <textarea rows="6" placeholder="Describe the problem..." required style="padding: 10px; border-radius: 6px;"></textarea>
+      <button type="submit" style="background-color: #0065c3; color: white; padding: 12px; font-size: 16px; border: none; border-radius: 6px; cursor: pointer;">Submit</button>
+    </form>
+  </div>
+
+  <footer style="background-color: #1e2a2a; color: white; padding: 40px 20px; text-align: center;">
+    <p>27, Wireless Road, Trichy, Tamil Nadu - 620 021, INDIA | +91 89407 96777 | visionsglobalempowermentindia@gmail.com</p>
+     <div style="margin-top: 30px;">
+            <a href="https://facebook.com" target="_blank" style="margin: 0 10px;">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="40" height="40"
+                    style="border-radius: 6px;">
+            </a>
+            <a href="https://linkedin.com" target="_blank" style="margin: 0 10px;">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="40" height="40"
+                    style="border-radius: 6px;">
+            </a>
+        </div>
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function changeSlide(n) {
+      slides[slideIndex].style.display = "none";
+      slideIndex = (slideIndex + n + slides.length) % slides.length;
+      slides[slideIndex].style.display = "block";
+    }
+
+    function switchLanguage(lang) {
+      document.querySelectorAll('.language-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      // Simplified: Only updates main title for this example
+      const titles = {
+        en: 'Visions Global Empowerment India ("Visions India")',
+        ta: 'விஷன்ஸ் குளோபல் எம்பவர்மென்ட் இந்தியா ("விஷன்ஸ் இந்தியா")',
+        hi: 'विजन्स ग्लोबल एम्पावरमेंट इंडिया ("विजन्स इंडिया")'
+      };
+      document.getElementById('main-title').textContent = titles[lang];
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx1 = document.getElementById("chart1").getContext("2d");
+  const chart1 = new Chart(ctx1, {
+    type: 'bar',
+    data: {
+      labels: ['2019', '2020', '2021', '2022', '2023'],
+      datasets: [{
+        label: 'Women Educated',
+        data: [500, 1200, 2200, 3500, 5000],
+        backgroundColor: '#0065c3'
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false
+    }
+  });
+
+  const ctx2 = document.getElementById("chart2").getContext("2d");
+  const chart2 = new Chart(ctx2, {
+    type: 'line',
+    data: {
+      labels: ['2019', '2020', '2021', '2022', '2023'],
+      datasets: [{
+        label: 'Hygiene Drives',
+        data: [5, 15, 25, 40, 60],
+        borderColor: '#28a745',
+        fill: false
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false
+    }
+  });
+
+  const ctx3 = document.getElementById("chart3").getContext("2d");
+  const chart3 = new Chart(ctx3, {
+    type: 'doughnut',
+    data: {
+      labels: ['Planted', 'Goal Remaining'],
+      datasets: [{
+        label: 'Tree Plantation',
+        data: [10000, 5000],
+        backgroundColor: ['#2e8b57', '#d3d3d3']
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false
+    }
+  });
+</script>
+
+
+</body>
+
+</html>

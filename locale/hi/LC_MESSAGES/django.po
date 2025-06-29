@@ -1,0 +1,115 @@
+# Hindi translations for Visions India project.
+# Copyright (C) 2024 Visions India
+# This file is distributed under the same license as the Visions India project.
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 12:00+0000\n"
+"PO-Revision-Date: 2024-01-01 12:00+0000\n"
+"Last-Translator: \n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: templates/accounts/homepage.html:8
+msgid "Visions Global Empowerment India"
+msgstr "विजन्स ग्लोबल एम्पावरमेंट इंडिया"
+
+#: templates/accounts/homepage.html:45
+msgid "Language"
+msgstr "भाषा"
+
+#: templates/accounts/homepage.html:52
+msgid "About"
+msgstr "हमारे बारे में"
+
+#: templates/accounts/homepage.html:53
+msgid "Alumni"
+msgstr "पूर्व छात्र"
+
+#: templates/accounts/homepage.html:54
+msgid "Green Initiative"
+msgstr "हरित पहल"
+
+#: templates/accounts/homepage.html:55
+msgid "Raise Problem"
+msgstr "समस्या उठाएं"
+
+#: templates/accounts/homepage.html:56
+msgid "Login"
+msgstr "लॉगिन"
+
+#: templates/accounts/homepage.html:62
+msgid "Visions India"
+msgstr "विजन्स इंडिया"
+
+#: templates/accounts/homepage.html:63
+msgid "Education is the most powerful weapon which you can use to change the world."
+msgstr "शिक्षा सबसे शक्तिशाली हथियार है जिसका उपयोग आप दुनिया को बदलने के लिए कर सकते हैं।"
+
+#: templates/accounts/homepage.html:63
+msgid "Nelson Mandela"
+msgstr "नेल्सन मंडेला"
+
+#: templates/accounts/homepage.html:64
+msgid "At Visions India, we believe real change begins with opportunity. We empower underserved communities by expanding access to quality education, cultivating resilient leadership, driving digital inclusion, and promoting holistic health."
+msgstr "विजन्स इंडिया में, हम मानते हैं कि वास्तविक परिवर्तन अवसर से शुरू होता है। हम गुणवत्तापूर्ण शिक्षा तक पहुंच बढ़ाकर, लचीला नेतृत्व विकसित करके, डिजिटल समावेशन को बढ़ावा देकर और समग्र स्वास्थ्य को बढ़ावा देकर वंचित समुदायों को सशक्त बनाते हैं।"
+
+#: templates/accounts/homepage.html:65
+msgid "The future belongs to those who believe in the beauty of their dreams."
+msgstr "भविष्य उनका है जो अपने सपनों की सुंदरता में विश्वास रखते हैं।"
+
+#: templates/accounts/homepage.html:65
+msgid "Eleanor Roosevelt"
+msgstr "एलीनोर रूजवेल्ट"
+
+#: templates/accounts/homepage.html:66
+msgid "Join us in turning vision into voice, learning into leadership, and communities into catalysts of change."
+msgstr "दृष्टि को आवाज में, सीखने को नेतृत्व में और समुदायों को परिवर्तन के उत्प्रेरक में बदलने में हमारे साथ जुड़ें।"
+
+#: templates/accounts/homepage.html:67
+msgid "LEARNING"
+msgstr "सीखना"
+
+#: templates/accounts/homepage.html:67
+msgid "LEADERSHIP"
+msgstr "नेतृत्व"
+
+#: templates/accounts/homepage.html:67
+msgid "INNOVATION"
+msgstr "नवाचार"
+
+#: templates/accounts/homepage.html:67
+msgid "WELL-BEING"
+msgstr "कल्याण"
+
+#: templates/accounts/homepage.html:72
+msgid "About Image"
+msgstr "हमारे बारे में छवि"
+
+#: templates/accounts/homepage.html:74
+msgid "Know More"
+msgstr "और जानें"
+
+#: templates/accounts/homepage.html:76
+msgid "Visions India is dedicated to creating lasting impact by providing meaningful education and cultivating strong leadership among underserved communities across India. Through innovative learning programs, youth empowerment initiatives, and community-based development efforts, we aim to bridge opportunity gaps and foster a generation of informed, confident, and socially responsible changemakers."
+msgstr "विजन्स इंडिया भारत भर के वंचित समुदायों में सार्थक शिक्षा प्रदान करके और मजबूत नेतृत्व विकसित करके स्थायी प्रभाव पैदा करने के लिए समर्पित है। नवीन शिक्षण कार्यक्रमों, युवा सशक्तिकरण पहलों और समुदाय-आधारित विकास प्रयासों के माध्यम से, हम अवसर के अंतराल को पाटने और सूचित, आत्मविश्वासी और सामाजिक रूप से जिम्मेदार परिवर्तनकारियों की पीढ़ी को बढ़ावा देने का लक्ष्य रखते हैं।"
+
+#: templates/accounts/homepage.html:82
+msgid "Alumni Image"
+msgstr "पूर्व छात्र छवि"
+
+#: templates/accounts/homepage.html:86
+msgid "Our alumni are passionate leaders and changemakers who carry forward the values of empathy, resilience, and service. Equipped with the skills and confidence gained through our programs, they are making a lasting impact—championing education, advocating for equity, and uplifting their communities with dignity, purpose, and hope. They are living proof that empowered individuals can drive meaningful and sustainable change."
+msgstr "हमारे पूर्व छात्र जुनूनी नेता और परिवर्तनकारी हैं जो सहानुभूति, लचीलापन और सेवा के मूल्यों को आगे बढ़ाते हैं। हमारे कार्यक्रमों के माध्यम से प्राप्त कौशल और आत्मविश्वास से लैस, वे स्थायी प्रभाव डाल रहे हैं—शिक्षा का समर्थन कर रहे हैं, समानता की वकालत कर रहे हैं, और गरिमा, उद्देश्य और आशा के साथ अपने समुदायों को ऊपर उठा रहे हैं। वे जीवंत प्रमाण हैं कि सशक्त व्यक्ति सार्थक और स्थायी परिवर्तन ला सकते हैं।"
+
+#: templates/accounts/homepage.html:92
+msgid "Green Initiative Image"
+msgstr "हरित पहल छवि"
+
+#: templates/accounts/homepage.html:96
+msgid "We are deeply committed to sustainability and believe in the power of youth as catalysts for environmental change. Through hands-on initiatives, education, and community engagement, we empower young leaders to take ownership of climate action, promote eco-conscious practices, and drive innovative solutions that protect and preserve our planet for future generations."
+msgstr "हम स्थिरता के प्रति गहराई से प्रतिबद्ध हैं और पर्यावरणीय परिवर्तन के उत्प्रेरक के रूप में युवाओं की शक्ति में विश्वास करते हैं। हाथों-हाथ पहलों, शिक्षा और समुदाय की भागीदारी के माध्यम से, हम युवा नेताओं को जलवायु कार्रवाई का स्वामित्व लेने, पर्यावरण-जागरूक प्रथाओं को बढ़ावा देने और भविष्य की पीढ़ियों के लिए हमारे ग्रह की रक्षा और संरक्षण करने वाले नवीन समाधानों को चलाने के लिए सशक्त बनाते हैं।" 

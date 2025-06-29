@@ -1,0 +1,132 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="{{ current_language }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans "Login" %} - {% trans "Visions India" %}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .login-container {
+            max-width: 400px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #0065c3;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #045c29;
+        }
+        .error {
+            color: red;
+            margin-bottom: 15px;
+        }
+        .success {
+            color: green;
+            margin-bottom: 15px;
+        }
+        .language-selector {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .language-btn {
+            background-color: transparent;
+            color: #0065c3;
+            border: 1px solid #0065c3;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-left: 5px;
+        }
+        .language-btn.active {
+            background-color: #0065c3;
+            color: white;
+        }
+        .back-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-link a {
+            color: #0065c3;
+            text-decoration: none;
+        }
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="language-selector">
+            <span>{% trans "Language" %}:</span>
+            <button class="language-btn {% if current_language == 'en' %}active{% endif %}" 
+                    onclick="switchLanguage('en')">English</button>
+            <button class="language-btn {% if current_language == 'ta' %}active{% endif %}" 
+                    onclick="switchLanguage('ta')">தமிழ்</button>
+            <button class="language-btn {% if current_language == 'hi' %}active{% endif %}" 
+                    onclick="switchLanguage('hi')">हिंदी</button>
+        </div>
+        
+        <h2>{% trans "Login to Visions India" %}</h2>
+        
+        {% if error %}
+            <div class="error">{{ error }}</div>
+        {% endif %}
+        
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="username">{% trans "Username" %}:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">{% trans "Password" %}:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">{% trans "Login" %}</button>
+        </form>
+        
+        <div class="back-link">
+            <a href="{% url 'homepage' %}">{% trans "Back to Homepage" %}</a>
+        </div>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            window.location.href = `{% url 'switch_language' %}?lang=${lang}`;
+        }
+    </script>
+</body>
+</html>
