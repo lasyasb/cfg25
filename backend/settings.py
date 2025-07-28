@@ -147,4 +147,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_ALL_ORIGINS = True
 
 # Google Generative AI API Key
-GOOGLE_GENERATIVE_AI_API_KEY = 'AIzaSyDmZ8sqpqi2eJ6f41MrUip4p18ANVOx5fU'
+GOOGLE_GENERATIVE_AI_API_KEY = '#your own apikey'
